@@ -2,14 +2,14 @@ package configs
 
 import (
 	"fmt"
+	"html/template"
 	"io"
 	"log"
 	"os"
-	"text/template"
 
 	"github.com/docker/docker/client"
 	"github.com/joho/godotenv"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 // Define the template registry struct

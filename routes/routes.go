@@ -2,6 +2,7 @@ package routes
 
 import (
 	"example.com/dockermanager/controllers/container"
+	"example.com/dockermanager/controllers/front"
 	"example.com/dockermanager/controllers/image"
 	"example.com/dockermanager/controllers/volume"
 	"github.com/golang-jwt/jwt"
@@ -28,6 +29,8 @@ func SetupRoutes(e *echo.Echo) {
 		Browse: true,
 	}
 	e.Use(middleware.StaticWithConfig(staticConfig))
+
+	e.GET("/home", front.HomePage)
 
 	apiRoutes := e.Group("/api/v1")
 

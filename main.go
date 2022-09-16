@@ -19,6 +19,9 @@ var dockerClient *client.Client
 func main() {
 	e := echo.New()
 
+	// Instantiate a template registry and register all html files inside the view folder
+	configs.RegisterTemplates(e)
+
 	//setup routes
 	routes.SetupRoutes(e)
 

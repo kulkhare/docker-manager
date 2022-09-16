@@ -15,7 +15,7 @@ var dockerClient = configs.DC
 // TODO
 func CreateVolume(c echo.Context) error {
 	//func (cli *Client) VolumeCreate(ctx context.Context, options volumetypes.VolumeCreateBody) (types.Volume, error)
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "CreateVolume not implemented yet"})
 }
 
 // return list of volumes
@@ -38,13 +38,13 @@ func ListVolumes(c echo.Context) error {
 // TODO
 func RemoveVolume(c echo.Context) error {
 	//func (cli *Client) VolumeRemove(ctx context.Context, volumeID string, force bool) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "RemoveVolume not implemented yet"})
 }
 
 // TODO
 func PruneVolumes(c echo.Context) error {
 	//func (cli *Client) VolumesPrune(ctx context.Context, pruneFilters filters.Args) (types.VolumesPruneReport, error)
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "PruneVolumes not implemented yet"})
 }
 
 /*

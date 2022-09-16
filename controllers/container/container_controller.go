@@ -15,25 +15,25 @@ var dockerClient = configs.DC
 // TODO
 func CreateContainer(c echo.Context) error {
 	//func (cli *Client) ContainerCreate(ctx context.Context, config *container.Config, ...) (container.ContainerCreateCreatedBody, error)
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "CreateContainer not implemented yet"})
 }
 
 // TODO
-func UpdateContainer(e echo.Context) error {
+func UpdateContainer(c echo.Context) error {
 	//func (cli *Client) ContainerUpdate(ctx context.Context, containerID string, updateConfig container.UpdateConfig) (container.ContainerUpdateOKBody, error)
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "UpdateContainer not implemented yet"})
 }
 
 // TODO
-func SaveContainer(e echo.Context) error {
+func SaveContainer(c echo.Context) error {
 	//func (cli *Client) ContainerUpdate(ctx context.Context, containerID string, updateConfig container.UpdateConfig) (container.ContainerUpdateOKBody, error)
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "SaveContainer not implemented yet"})
 }
 
 // TODO
 func RenameContainer(c echo.Context) error {
 	//func (cli *Client) ContainerRename(ctx context.Context, containerID, newContainerName string) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "RenameContainer not implemented yet"})
 }
 
 // List all or running containers
@@ -64,13 +64,13 @@ func ListContainers(c echo.Context) error {
 // TODO
 func StartContainer(c echo.Context) error {
 	//func (cli *Client) ContainerStart(ctx context.Context, containerID string, options types.ContainerStartOptions) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "StartContainer not implemented yet"})
 }
 
 // TODO
 func RestartContainer(c echo.Context) error {
 	//func (cli *Client) ContainerRestart(ctx context.Context, containerID string, timeout *time.Duration) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "RestartContainer not implemented yet"})
 }
 
 // stop container
@@ -91,13 +91,13 @@ func StopContainer(c echo.Context) error {
 // TODO
 func PauseContainer(c echo.Context) error {
 	//func (cli *Client) ContainerPause(ctx context.Context, containerID string) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "PauseContainer not implemented yet"})
 }
 
 // TODO
 func ResumeContainer(c echo.Context) error {
 	//func (cli *Client) ContainerUnpause(ctx context.Context, containerID string) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "ResumeContainer not implemented yet"})
 }
 
 // TODO
@@ -118,13 +118,13 @@ func RemoveContainer(c echo.Context) error {
 // TODO
 func KillContainer(c echo.Context) error {
 	//func (cli *Client) ContainerKill(ctx context.Context, containerID, signal string) error
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "KillContainer not implemented yet"})
 }
 
 // TODO
 func ContainerLogs(c echo.Context) error {
 	//func (cli *Client) ContainerLogs(ctx context.Context, container string, options types.ContainerLogsOptions) (io.ReadCloser, error)
-	return nil
+	return c.JSON(http.StatusOK, &echo.Map{"message": "ContainerLogs not implemented yet"})
 }
 
 /*
