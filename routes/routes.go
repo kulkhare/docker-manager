@@ -30,7 +30,10 @@ func SetupRoutes(e *echo.Echo) {
 	}
 	e.Use(middleware.StaticWithConfig(staticConfig))
 
-	e.GET("/home", front.HomePage)
+	// Front view pages routes
+	e.GET("/containers", front.ContainerPage)
+	e.GET("/volumes", front.VolumePage)
+	e.GET("/images", front.ImagePage)
 
 	apiRoutes := e.Group("/api/v1")
 
