@@ -100,17 +100,17 @@ class ContentWindow extends React.Component {
                         <tr>
                             <th>DRIVER</th>
                             <th>VOLUME NAME</th>
-                            <th>STATUS</th>
+                            <th>MOUNT POINT</th>
                             <th>SCOPE</th>
                             <th>CREATED</th>
                         </tr>
                     </thead>
                     <tbody>
                         {items.map(item => (
-                            <tr key={item.Id}>
+                            <tr key={item.Name}>
                                 <td>{item.Driver}</td>
                                 <td>{item.Name.substring(0, 12)} {item.Name >= 12 && '...'}</td>
-                                <td>{item.Status}</td>
+                                <td>{item.Mountpoint}</td>
                                 <td>{item.Scope}</td>
                                 <td>{item.CreatedAt}</td>
                             </tr>
