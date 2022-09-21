@@ -2,16 +2,17 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"os"
 	"os/signal"
 	"time"
-	"fmt"
 
 	"example.com/dockermanager/configs"
 	"example.com/dockermanager/routes"
 	"github.com/docker/docker/client"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 var dockerClient *client.Client
@@ -21,6 +22,8 @@ func main() {
 
 	// Instantiate a template registry and register all html files inside the view folder
 	configs.RegisterTemplates(e)
+
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{}))
 
 	//setup routes
 	routes.SetupRoutes(e)
@@ -32,7 +35,7 @@ func main() {
 		}
 	}()
 
-	// Wait for interrupt signal to gracefully shutdown the server with a timeout of 20 seconds. 
+	// Wait for interrupt signal to gracefully shutdown the server with a timeout of 20 seconds.
 	// Use a buffered channel to avoid missing signals as recommended for signal.Notify
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt)
