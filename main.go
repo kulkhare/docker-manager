@@ -23,6 +23,7 @@ func main() {
 	// Instantiate a template registry and register all html files inside the view folder
 	configs.RegisterTemplates(e)
 
+	// CORS
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{}))
 
 	//setup routes
