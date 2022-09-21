@@ -4,6 +4,7 @@ import (
 	"example.com/dockermanager/controllers/container"
 	"example.com/dockermanager/controllers/front"
 	"example.com/dockermanager/controllers/image"
+	"example.com/dockermanager/controllers/statics"
 	"example.com/dockermanager/controllers/volume"
 	"github.com/golang-jwt/jwt"
 	"github.com/labstack/echo/v4"
@@ -69,4 +70,7 @@ func SetupRoutes(e *echo.Echo) {
 	apiRoutes.GET("/image/import/:image", image.ImportImage)
 	apiRoutes.GET("/image/history/:imageId", image.ImageHistory)
 	apiRoutes.GET("/image/prune/:imageId", image.ImageHistory)
+
+	// Statics routes
+	apiRoutes.GET("/statics", statics.GetDiskUsage)
 }
